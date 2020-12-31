@@ -1,0 +1,5 @@
+frontend- deploying on firebase 
+backend - deploying on heroku
+
+For fronend -we are using firebase for hosting, authentication
+For real time functionality of chat application, we will be using mongoDb's change stream and pusher, when there is a chnage in mongodb's selected collection that will fire off the chnage stream and that will fire off pusher which will fire off the axios/fetch function on the frontend which will refresh all the conversation and so you will see everything in real time
