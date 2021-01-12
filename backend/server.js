@@ -27,7 +27,7 @@ app.use(cors());
 
 //db config
 const connection_url = 
-'mongodb+srv://snehal:d3zigwZXS9DRP245@cluster0.xtrnh.mongodb.net/jusChat-backend?retryWrites=true&w=majority';
+' ';
 
 mongoose.connect(connection_url,{
     useCreateIndex: true,
@@ -57,15 +57,6 @@ mongoose.connect(connection_url,{
        })
    });
    
-   
-
-//????
-
-
-//api routes
-  //200s --> okay
-  //400s --> client
-  //500s --> server
 app.get('/', (req,res) => res.status(200).send("hello world"));
 
 app.get('/messages/sync' , (req, res) => {
