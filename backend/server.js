@@ -1,12 +1,10 @@
-//importing
+
 import express from 'express'
 import mongoose from 'mongoose'
 import Messages from './dbMessages.js'
 import Pusher from "pusher"
 import cors from 'cors' 
 
-//app config
-  //created the application instance
 const app = express()
 const port = process.env.PORT || 9000
 
@@ -20,12 +18,12 @@ const pusher = new Pusher({
   });
   
 
-//middleware
+
 app.use(express.json());
 app.use(cors());
 
 
-//db config
+
 const connection_url = 
 ' ';
 
@@ -71,7 +69,7 @@ app.get('/messages/sync' , (req, res) => {
 })
 
 
-//posting message
+
 app.post('/messages/new' , (req,res)  => {
     const dbMessage = req.body
     Messages.create(dbMessage, (err, data) => {
@@ -84,5 +82,5 @@ app.post('/messages/new' , (req,res)  => {
     })
 })
 
-//listener
+
 app.listen(port,() => console.log(`Listening on localhost: ${port}`))
